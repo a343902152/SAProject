@@ -1,21 +1,26 @@
 package project2;
 
+import project2.adapter.BirdAdapter;
+import project2.adapter.DogAdapter;
+import project2.target.BirdAction;
+import project2.target.DogAction;
+
 public class Main {
 
     public static void main(String[] args) {
+        BionicsRobot robot=new BionicsRobot();
+        System.out.println("basic action:");
+        robot.move();
+        robot.cry();
 
-        System.out.println("高配系统：");
-//        MySystem highConfigSystem=new MySystem(3,10);
-//        String shape1=highConfigSystem.getShapgeFromDB();
-//        highConfigSystem.print(shape1);
-//        highConfigSystem.display(shape1);
-//
-//
-//        System.out.println("\n\n低配系统：");
-//        MySystem lowConfigSystem=new MySystem(1,1);
-//        String shape2=lowConfigSystem.getShapgeFromDB();
-//        lowConfigSystem.print(shape2);
-//        lowConfigSystem.display(shape2);
+        System.out.println("\nbird action:");
+        robot.setAction(new BirdAdapter(new BirdAction()));
+        robot.move();
+        robot.cry();
 
+        System.out.println("\ndog action:");
+        robot.setAction(new DogAdapter(new DogAction()));
+        robot.move();
+        robot.cry();
     }
 }
