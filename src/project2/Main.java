@@ -2,8 +2,8 @@ package project2;
 
 import project2.adapter.BirdAdapter;
 import project2.adapter.DogAdapter;
-import project2.target.BirdAction;
-import project2.target.DogAction;
+import project2.adaptee.BirdAction;
+import project2.adaptee.DogAction;
 
 public class Main {
 

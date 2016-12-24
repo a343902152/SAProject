@@ -1,4 +1,4 @@
-package project2.adaptee;
+package project2.target;
 
 /**
  * Created by hasee on 2016/11/11.

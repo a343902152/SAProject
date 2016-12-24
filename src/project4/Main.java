@@ -11,7 +11,6 @@ public class Main {
         calculaterInvoker.undo();
         calculaterInvoker.sub();
         calculaterInvoker.add();
-
         calculaterInvoker.add();
         calculaterInvoker.sub();
         calculaterInvoker.sub();
@@ -19,7 +18,6 @@ public class Main {
         calculaterInvoker.undo();
         calculaterInvoker.add();
         calculaterInvoker.add();
-
         calculaterInvoker.undo();
         calculaterInvoker.undo();
         calculaterInvoker.undo();
@@ -27,7 +25,5 @@ public class Main {
         calculaterInvoker.undo();
         calculaterInvoker.undo();
         calculaterInvoker.undo();
-
-
     }
 }

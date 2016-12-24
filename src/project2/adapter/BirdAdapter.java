@@ -1,7 +1,7 @@
 package project2.adapter;
 
-import project2.adaptee.IBasicAction;
-import project2.target.IBirdAction;
+import project2.target.IBasicAction;
+import project2.adaptee.IBirdAction;
 
 /**
  * Created by hasee on 2016/11/11.
