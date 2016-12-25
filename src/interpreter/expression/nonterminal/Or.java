@@ -1,17 +1,17 @@
 package interpreter.expression.nonterminal;
 
 import interpreter.context.Context;
-import interpreter.expression.Expression;
+import interpreter.expression.BooleanExpression;
 
 /**
  * Created by hasee on 2016/12/25.
  */
-public class Or extends Expression {
+public class Or extends BooleanExpression {
 
-    private Expression left;
-    private Expression right;
+    private BooleanExpression left;
+    private BooleanExpression right;
 
-    public Or(Expression left, Expression right) {
+    public Or(BooleanExpression left, BooleanExpression right) {
         this.left = left;
         this.right = right;
     }

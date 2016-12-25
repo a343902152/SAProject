@@ -2,18 +2,18 @@ package interpreter.expression.terminal;
 
 
 import interpreter.context.Context;
-import interpreter.expression.Expression;
+import interpreter.expression.BooleanExpression;
 
 /**
  * 代表一个有名(字)变量
  * Created by hasee on 2016/12/25.
  */
-public class Variable extends Expression {
+public class BooleanVariable extends BooleanExpression {
 
     private String name;
 
 
-    public Variable(String name) {
+    public BooleanVariable(String name) {
         this.name = name;
     }
 
@@ -31,8 +31,8 @@ public class Variable extends Expression {
 
     @Override
     public boolean equals(Object o) {
-        if (o != null && o instanceof Variable) {
-            return this.name.equals(((Variable) o).name);
+        if (o != null && o instanceof BooleanVariable) {
+            return this.name.equals(((BooleanVariable) o).name);
         }
         return false;
     }

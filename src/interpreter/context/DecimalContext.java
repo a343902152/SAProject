@@ -1,23 +1,24 @@
 package interpreter.context;
 
+import interpreter.expression.OperationExpression;
 import interpreter.expression.terminal.BooleanVariable;
+import interpreter.expression.terminal.DecimalVariable;
 
 import java.util.HashMap;
 
 /**
- * 上下文类，保存变量名与对应的值
  * Created by hasee on 2016/12/25.
  */
-public class Context {
-    private HashMap<BooleanVariable,Boolean> variableMap =new HashMap();
+public class DecimalContext {
+    private HashMap<OperationExpression,Double> map = new HashMap<OperationExpression, Double>();
 
     /**
      * 每有一个变量，就把他登记在册(variableMap)
      * @param var
      * @param value
      */
-    public void assign(BooleanVariable var, boolean value){
-        variableMap.put(var, value);
+    public void assign(DecimalVariable var, double value){
+        map.put(var, value);
     }
 
     /**
@@ -25,11 +26,12 @@ public class Context {
      * @param var
      * @return
      */
-    public boolean lookup(BooleanVariable var){
-        Boolean value=(Boolean) variableMap.get(var);
+    public double lookup(DecimalVariable var){
+        Double value=map.get(var);
         if(value==null){
             throw new IllegalArgumentException();
         }
         return value;
     }
+
 }

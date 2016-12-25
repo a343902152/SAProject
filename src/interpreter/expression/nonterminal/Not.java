@@ -1,16 +1,16 @@
 package interpreter.expression.nonterminal;
 
 import interpreter.context.Context;
-import interpreter.expression.Expression;
+import interpreter.expression.BooleanExpression;
 
 /**
  * Created by hasee on 2016/12/25.
  */
-public class Not extends Expression {
+public class Not extends BooleanExpression {
 
-    private Expression expression;
+    private BooleanExpression expression;
 
-    public Not(Expression expression) {
+    public Not(BooleanExpression expression) {
         this.expression = expression;
     }
 
