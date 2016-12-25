@@ -1,13 +1,12 @@
-package interpreter.expression.terminal;
+package interpreter.expression.terminal.decimal;
 
-import interpreter.context.Context;
 import interpreter.context.DecimalContext;
-import interpreter.expression.OperationExpression;
+import interpreter.expression.DecimalExpression;
 
 /**
  * Created by hasee on 2016/12/25.
  */
-public class DecimalVariable extends OperationExpression{
+public class DecimalVariable extends DecimalExpression {
     private String name;
 
     public DecimalVariable(String name) {

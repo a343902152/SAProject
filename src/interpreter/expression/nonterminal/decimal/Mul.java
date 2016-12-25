@@ -1,17 +1,17 @@
-package interpreter.expression.nonterminal;
+package interpreter.expression.nonterminal.decimal;
 
 import interpreter.context.DecimalContext;
-import interpreter.expression.OperationExpression;
+import interpreter.expression.DecimalExpression;
 
 /**
  * Created by hasee on 2016/12/25.
  */
-public class Mul extends OperationExpression {
+public class Mul extends DecimalExpression {
 
-    private OperationExpression left;
-    private OperationExpression right;
+    private DecimalExpression left;
+    private DecimalExpression right;
 
-    public Mul(OperationExpression left, OperationExpression right) {
+    public Mul(DecimalExpression left, DecimalExpression right) {
         this.left = left;
         this.right = right;
     }

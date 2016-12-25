@@ -1,12 +1,12 @@
-package interpreter.expression.terminal;
+package interpreter.expression.terminal.decimal;
 
 import interpreter.context.DecimalContext;
-import interpreter.expression.OperationExpression;
+import interpreter.expression.DecimalExpression;
 
 /**
  * Created by hasee on 2016/12/25.
  */
-public class DecimalConstant extends OperationExpression {
+public class DecimalConstant extends DecimalExpression {
 
     private double value;
 

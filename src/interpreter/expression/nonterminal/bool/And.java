@@ -1,7 +1,7 @@
-package interpreter.expression.nonterminal;
+package interpreter.expression.nonterminal.bool;
 
 
-import interpreter.context.Context;
+import interpreter.context.BooleanContext;
 import interpreter.expression.BooleanExpression;
 
 /**
@@ -18,7 +18,7 @@ public class And extends BooleanExpression {
     }
 
     @Override
-    public boolean interpret(Context context) {
+    public boolean interpret(BooleanContext context) {
         return left.interpret(context) && right.interpret(context);
     }
 

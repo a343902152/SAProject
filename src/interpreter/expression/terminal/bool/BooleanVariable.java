@@ -1,7 +1,7 @@
-package interpreter.expression.terminal;
+package interpreter.expression.terminal.bool;
 
 
-import interpreter.context.Context;
+import interpreter.context.BooleanContext;
 import interpreter.expression.BooleanExpression;
 
 /**
@@ -25,7 +25,7 @@ public class BooleanVariable extends BooleanExpression {
      * @return
      */
     @Override
-    public boolean interpret(Context context) {
+    public boolean interpret(BooleanContext context) {
         return context.lookup(this);
     }
 

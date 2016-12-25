@@ -1,19 +1,17 @@
-package interpreter.expression.nonterminal;
+package interpreter.expression.nonterminal.decimal;
 
-import interpreter.context.Context;
 import interpreter.context.DecimalContext;
-import interpreter.expression.BooleanExpression;
-import interpreter.expression.OperationExpression;
+import interpreter.expression.DecimalExpression;
 
 /**
  * Created by hasee on 2016/12/25.
  */
-public class Add extends OperationExpression {
+public class Add extends DecimalExpression {
 
-    private OperationExpression left;
-    private OperationExpression right;
+    private DecimalExpression left;
+    private DecimalExpression right;
 
-    public Add(OperationExpression left, OperationExpression right) {
+    public Add(DecimalExpression left, DecimalExpression right) {
         this.left = left;
         this.right = right;
     }

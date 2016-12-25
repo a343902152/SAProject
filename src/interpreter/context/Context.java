@@ -1,35 +1,12 @@
 package interpreter.context;
 
-import interpreter.expression.terminal.BooleanVariable;
-
-import java.util.HashMap;
+import interpreter.expression.Expression;
 
 /**
- * 上下文类，保存变量名与对应的值
+ * 问题：assign中的输入参数(boolean、double、int、string等)以及返回值(boolean、double、string)均在变化
+ *      这时应该选择哪种方式来把他们统一起来？
  * Created by hasee on 2016/12/25.
  */
-public class Context {
-    private HashMap<BooleanVariable,Boolean> variableMap =new HashMap();
-
-    /**
-     * 每有一个变量，就把他登记在册(variableMap)
-     * @param var
-     * @param value
-     */
-    public void assign(BooleanVariable var, boolean value){
-        variableMap.put(var, value);
-    }
-
-    /**
-     * 在登记过的数据中查找variable对应的值
-     * @param var
-     * @return
-     */
-    public boolean lookup(BooleanVariable var){
-        Boolean value=(Boolean) variableMap.get(var);
-        if(value==null){
-            throw new IllegalArgumentException();
-        }
-        return value;
-    }
+public abstract class Context {
+    public abstract Object assign(Expression expression,Object value);
 }
