@@ -28,22 +28,28 @@ public class Main {
 //        System.out.println("y=" + y.interpret(context));
 //        System.out.println(expression.toString() + "=" + expression.interpret(context));
 
-
-        DecimalContext decimalContext=new DecimalContext();
-        DecimalVariable a=new DecimalVariable("a");
-        DecimalVariable b=new DecimalVariable("b");
+        String str = "abc abc";
+        char[] ch = str.toCharArray();
+        for (int i = 0; i < ch.length; i++) {
+            if (Character.isSpaceChar(ch[i]))
+                System.out.println("ok");
+        }
+        DecimalContext decimalContext = new DecimalContext();
+        DecimalVariable a = new DecimalVariable("a");
+        DecimalVariable b = new DecimalVariable("b");
         DecimalVariable c = new DecimalVariable("c");
-        DecimalConstant d=new DecimalConstant(1.5);
-        DecimalConstant e=new DecimalConstant(2);
-        decimalContext.assign(a,10);
-        decimalContext.assign(b,5);
-        decimalContext.assign(c,0.5);
+        DecimalConstant d = new DecimalConstant(1.5);
+        DecimalConstant e = new DecimalConstant(2);
+        decimalContext.assign(a, 10);
+        decimalContext.assign(b, 5);
+        decimalContext.assign(c, 0.5);
 //        decimalExpression=d*((a-(b+c))/e-(a+c))
 //        DecimalExpression decimalExpression=new Sub(new Sub(a,new Add(b,c)),new Add(a,c));
-        DecimalExpression decimalExpression =new Mul(d,new Sub(new Div(new Sub(a,new Add(b,c)),e),new Add(a,c)));
+        DecimalExpression decimalExpression = new Mul(d, new Sub(new Div(new Sub(a, new Add(b, c)), e), new Add(a, c)));
 
         System.out.println(decimalExpression.toString());
         System.out.println(decimalExpression.interpret(decimalContext));
 
     }
 }
+
